@@ -1,0 +1,303 @@
+[
+    {
+        "keyword": "Feature",
+        "name": "Administraci\u00f3n de tareas",
+        "tags": [],
+        "location": "features/todo_list.feature:1",
+        "status": "passed",
+        "elements": [
+            {
+                "type": "scenario",
+                "keyword": "Scenario",
+                "name": "Agregar tarea",
+                "tags": [],
+                "location": "features/todo_list.feature:2",
+                "steps": [
+                    {
+                        "keyword": "Given",
+                        "step_type": "given",
+                        "name": "que la lista de tareas est\u00e1 vac\u00eda",
+                        "location": "features/todo_list.feature:3",
+                        "match": {
+                            "location": "features/steps/todo_list_steps.py:5",
+                            "arguments": []
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.0009992122650146484
+                        }
+                    },
+                    {
+                        "keyword": "When",
+                        "step_type": "when",
+                        "name": "agrego una tarea con nombre \"Hacer compras\"",
+                        "location": "features/todo_list.feature:4",
+                        "match": {
+                            "location": "features/steps/todo_list_steps.py:9",
+                            "arguments": [
+                                {
+                                    "value": "Hacer compras",
+                                    "name": "nombre"
+                                }
+                            ]
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.0
+                        }
+                    },
+                    {
+                        "keyword": "Then",
+                        "step_type": "then",
+                        "name": "veo un mensaje que dice \"Tarea 'Hacer compras' agregada a la lista\"",
+                        "location": "features/todo_list.feature:5",
+                        "match": {
+                            "location": "features/steps/todo_list_steps.py:13",
+                            "arguments": [
+                                {
+                                    "value": "Tarea 'Hacer compras' agregada a la lista",
+                                    "name": "mensaje"
+                                }
+                            ]
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.0
+                        }
+                    }
+                ],
+                "status": "passed"
+            },
+            {
+                "type": "scenario",
+                "keyword": "Scenario",
+                "name": "Marcar una tarea como completada",
+                "tags": [],
+                "location": "features/todo_list.feature:7",
+                "steps": [
+                    {
+                        "keyword": "Given",
+                        "step_type": "given",
+                        "name": "que la lista de tareas contiene tareas",
+                        "location": "features/todo_list.feature:8",
+                        "table": {
+                            "headings": [
+                                "Tarea",
+                                "Estado"
+                            ],
+                            "rows": [
+                                [
+                                    "Comprar v\u00edveres",
+                                    "Pendiente"
+                                ]
+                            ]
+                        },
+                        "match": {
+                            "location": "features/steps/todo_list_steps.py:19",
+                            "arguments": []
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.0
+                        }
+                    },
+                    {
+                        "keyword": "When",
+                        "step_type": "when",
+                        "name": "el usuario marca la tarea \"Comprar v\u00edveres\" como completada",
+                        "location": "features/todo_list.feature:11",
+                        "match": {
+                            "location": "features/steps/todo_list_steps.py:26",
+                            "arguments": [
+                                {
+                                    "value": "Comprar v\u00edveres",
+                                    "name": "nombre_tarea"
+                                }
+                            ]
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.0
+                        }
+                    },
+                    {
+                        "keyword": "Then",
+                        "step_type": "then",
+                        "name": "la lista de tareas deber\u00eda mostrar la tarea \"Comprar v\u00edveres\" como completada",
+                        "location": "features/todo_list.feature:12",
+                        "match": {
+                            "location": "features/steps/todo_list_steps.py:33",
+                            "arguments": [
+                                {
+                                    "value": "Comprar v\u00edveres",
+                                    "name": "nombre_tarea"
+                                }
+                            ]
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.0009996891021728516
+                        }
+                    }
+                ],
+                "status": "passed"
+            },
+            {
+                "type": "scenario",
+                "keyword": "Scenario",
+                "name": "Borrar toda la lista de tareas",
+                "tags": [],
+                "location": "features/todo_list.feature:15",
+                "steps": [
+                    {
+                        "keyword": "Given",
+                        "step_type": "given",
+                        "name": "que tengo una lista de tareas con tareas existentes",
+                        "location": "features/todo_list.feature:16",
+                        "match": {
+                            "location": "features/steps/todo_list_steps.py:45",
+                            "arguments": []
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.0
+                        }
+                    },
+                    {
+                        "keyword": "When",
+                        "step_type": "when",
+                        "name": "borro la lista de tareas",
+                        "location": "features/todo_list.feature:17",
+                        "match": {
+                            "location": "features/steps/todo_list_steps.py:51",
+                            "arguments": []
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.0009999275207519531
+                        }
+                    },
+                    {
+                        "keyword": "Then",
+                        "step_type": "then",
+                        "name": "la lista de tareas deber\u00eda estar vac\u00eda",
+                        "location": "features/todo_list.feature:18",
+                        "match": {
+                            "location": "features/steps/todo_list_steps.py:55",
+                            "arguments": []
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.0
+                        }
+                    }
+                ],
+                "status": "passed"
+            },
+            {
+                "type": "scenario",
+                "keyword": "Scenario",
+                "name": "Listar todas las tareas en la lista",
+                "tags": [],
+                "location": "features/todo_list.feature:20",
+                "steps": [
+                    {
+                        "keyword": "Given",
+                        "step_type": "given",
+                        "name": "que tengo una lista de tareas con tareas existentes",
+                        "location": "features/todo_list.feature:21",
+                        "match": {
+                            "location": "features/steps/todo_list_steps.py:45",
+                            "arguments": []
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.0009996891021728516
+                        }
+                    },
+                    {
+                        "keyword": "When",
+                        "step_type": "when",
+                        "name": "listo las tareas",
+                        "location": "features/todo_list.feature:22",
+                        "match": {
+                            "location": "features/steps/todo_list_steps.py:60",
+                            "arguments": []
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.0
+                        }
+                    },
+                    {
+                        "keyword": "Then",
+                        "step_type": "then",
+                        "name": "veo la lista de tareas",
+                        "location": "features/todo_list.feature:23",
+                        "match": {
+                            "location": "features/steps/todo_list_steps.py:64",
+                            "arguments": []
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.0
+                        }
+                    }
+                ],
+                "status": "passed"
+            },
+            {
+                "type": "scenario",
+                "keyword": "Scenario",
+                "name": "Intentar cambiar el estado de una tarea en lista vac\u00eda",
+                "tags": [],
+                "location": "features/todo_list.feature:26",
+                "steps": [
+                    {
+                        "keyword": "Given",
+                        "step_type": "given",
+                        "name": "que la lista de tareas est\u00e1 vac\u00eda",
+                        "location": "features/todo_list.feature:27",
+                        "match": {
+                            "location": "features/steps/todo_list_steps.py:5",
+                            "arguments": []
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.0
+                        }
+                    },
+                    {
+                        "keyword": "When",
+                        "step_type": "when",
+                        "name": "intento cambiar el estado de una tarea",
+                        "location": "features/todo_list.feature:28",
+                        "match": {
+                            "location": "features/steps/todo_list_steps.py:71",
+                            "arguments": []
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.00099945068359375
+                        }
+                    },
+                    {
+                        "keyword": "Then",
+                        "step_type": "then",
+                        "name": "deber\u00eda ver un mensaje de error indicando que la lista est\u00e1 vac\u00eda",
+                        "location": "features/todo_list.feature:29",
+                        "match": {
+                            "location": "features/steps/todo_list_steps.py:75",
+                            "arguments": []
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.0
+                        }
+                    }
+                ],
+                "status": "passed"
+            }
+        ]
+    }
+]
